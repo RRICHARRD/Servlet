@@ -2,11 +2,39 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
-	<title>[SERVLETS] - indexView.html</title>
+	<title>Post method</title>
 	</head>
 <body>
-	<h1>html page with link to servlets</h1>
-	<a href="/servlets/servletController">jump to servlet controller</a> <br/>
-	<a href="/servlets/signServletController">jump to servlet Sign controller</a>
+	<h3>Sign</h3>
+	<form method="post" action="servlet-controller">
+		Name: <br /> <input type="Text" name="name" size="40"> <br />
+
+		E-mail: <br /> <input type="Text" name="email" size="40">
+
+		<p>
+			Do you want to receive ower newsletter? <br /> <input type="Radio"
+				name="newsletter" value="yes">Yes <input type="Radio"
+				name="newsletter" value="no">No
+		</p>
+		<p>
+			What is your work position: <br /> <select
+				name="posicao">
+				<option value="CEO">CEO</option>
+				<option value="Diretor Executivo">Executive Director</option>
+				<option value="Gerente de TI">Manager</option>
+				<option value="Analista de Produção">QA Tester</option>
+				<option value="Arquiteto de Software">Software Arquitect</option>
+				<option value="Desenvolvedor">Developer</option>
+			</select>
+		</p>
+		<p>
+			Write your opinion about ower job: <br />
+			<textarea name="impressions" cols="28" rows="5"></textarea>
+		</p>
+		<p>
+			<input type="Submit" value="send"> <input type="Reset"
+				value="Clear data">
+		</p>
+	</form>
 </body>
 </html>
